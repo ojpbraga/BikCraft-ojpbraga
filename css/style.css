@@ -1,0 +1,326 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f7f7f7;
+    margin: 0px;
+}
+
+/* Start Header */
+header{
+    display: grid;
+    padding: 3rem;
+    gap: 2rem;
+    justify-items: center;
+}
+
+/* Título */
+#titulo{
+    display: flex;
+}
+#titulo h1{
+    margin: 0px;
+    font-size: 3rem;
+}
+
+#menu{
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+    place-items: center;
+    gap: 5px;
+    padding: 0px;
+    height: 3rem;
+    width: 3rem;
+    border: 2px solid #d2c2c2;
+    border-radius: 7px;
+    background: transparent;
+    cursor: pointer;
+}
+button.ativar .linha:nth-child(1){
+    transform: rotateY(36px) rotate(-45deg);
+    background-color: #900;
+}
+
+.linha{
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: #a5a5a5;
+    border-radius: 1px;
+    position: relative;
+    transform-origin: center;
+}
+/* Fim Título */
+
+
+/*  Start Links */
+.links{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 3rem;
+    justify-content: center;
+}
+.links a{
+    padding: 1.25rem;
+    background-color: #ffff;
+    border: 2px solid transparent;
+    border-radius: 7px;
+    text-decoration: none;
+    color: #000;
+    transition: 0.4s;
+}
+.links a:hover{
+    border: 2px solid #900;
+}
+/* End links */
+/* End Header */
+
+
+/* Start Container */
+#container-1, #container-2{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    max-width: 1000px;
+    margin: 0px auto;
+}
+
+
+/* Container 1 */
+#descricao{
+    display: grid;
+    position: relative;
+    background-color: #ffff;
+    padding: 3rem;
+    text-align: right;
+    align-content: center;
+    justify-items: end;
+    font-size: 1.1rem;
+}
+#descricao h1{
+    margin: 0px;
+}
+#descricao h1::before{
+    content: '';
+    display: block;
+    position: absolute;
+    background-color: red;
+    height: 0.3rem;
+    width: 6rem;
+    left: 28rem;
+    top: 3rem;
+    border-radius: 10rem;
+}
+#botao{
+    text-decoration: none;
+    color: white;
+    background-color: red;
+    padding: 10px 20px;
+    border-radius: 4px;
+    transition: .4s;
+}
+#botao:hover{
+    background-color: #900;
+}
+
+#bike_imagem{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* End Container 1 */
+
+
+/* Start Container 2 */
+/* Start Vantagem */
+.vantagem{
+    display: flex;
+    border-radius: 1vh;
+    padding: 2rem;
+    background-image: url(../img/onda.svg);
+}
+.vantagem h1{
+    color: #c6c6c6;
+    padding: 0px;
+    font-size: 4rem;
+    text-align: right;
+    align-self: center;
+    word-break: break-all;
+}
+/* End Vantagem */
+
+
+/* Start Caracteristicas */
+.caracteristicas{
+    display: grid;
+    margin: 0px;
+    background-color: #ffff;
+    padding: 2.5rem;
+}
+
+.caracteristicas li:nth-last-child(odd){
+    background-color: #e7e7e7;
+}
+
+.caracteristicas_item{
+    display: grid;
+    grid-template-columns: 20px 1fr;
+    align-items: center;
+    padding: 1.5rem;
+    border-radius: 4px;
+    gap: 0.9rem;
+    border-left: 0.2rem solid transparent;
+    transition: 0.4s all;
+}
+.caracteristicas_item li{
+    list-style: none;
+}
+.caracteristicas_item p{
+    margin: 0px;
+    grid-column: 2;
+    font-size: 1.1rem;
+}
+.caracteristicas_item h4{
+    margin: 0px;
+    font-size: 1.2rem;
+}
+.caracteristicas_item:hover{
+    border-left: 0.2rem solid red;
+}
+/* End Container 2  */
+/* End Container */
+
+
+/* Start Footer */
+footer{
+  background-color: white;
+  margin-top: 100px;
+}
+footer h4{
+    margin: 0px;
+    text-align: center;
+    padding: 2rem;
+}
+/* End Footer */
+
+
+
+/* Start Responsive */
+/* @media(min-width: 640px){
+    #menu{
+        display: none;
+    }
+} */
+@media(max-width:1007px) and (max-width: 640px){
+    .vantagem h1{
+        text-align: center;
+    }
+}
+@media(max-width: 1007px){
+    main{
+        margin: auto 1rem;
+    }
+    #descricao h1::before{
+        display: none;
+    }
+}
+
+@media(max-width: 640px){
+    header{
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+    }
+    #titulo{
+        display: flex;
+        justify-content: space-between;
+    }
+
+
+    /* #menu{
+        display: flex;
+        flex-direction: column;
+        place-content: center;
+        place-items: center;
+        gap: 5px;
+        padding: 0px;
+        height: 3rem;
+        width: 3rem;
+        border: 2px solid #d2c2c2;
+        border-radius: 7px;
+        background: transparent;
+        cursor: pointer;
+    }
+    button.ativar .linha:nth-child(1){
+        transform: rotateY(36px) rotate(-45deg);
+        background-color: #900;
+    }
+
+    .linha{
+        display: block;
+        width: 30px;
+        height: 2px;
+        background-color: #a5a5a5;
+        border-radius: 1px;
+        position: relative;
+        transform-origin: center;
+    } */
+
+
+
+
+
+    main{
+        margin: auto 0.5rem;
+    }
+    #container-image{
+        grid-row: 1;
+    }
+    #descricao{
+        text-align: left;
+    }
+    .caracteristicas{
+        padding: 1.5rem;
+    }
+}
+
+/* @media (max-width: 700px) {
+    #titulo h1{
+        padding: 1rem;
+    }
+    .links{
+        padding: 0px;
+    }
+    #descricao{
+        text-align: left;
+        padding: 2rem;
+    }
+    #bike_imagem{
+        grid-row: 1;
+        border-radius: 7px;
+    }
+    #conteudo{
+        margin: 0rem 0.5rem;
+    }
+    #descricao{
+        border-radius: 7px;
+        margin-top: 1rem;
+    }
+    .vantagem h1{
+        font-size: 3rem;
+        text-align: center;
+    }
+} */
+/* @media (max-width: 400px){
+    .vantagem h1{
+        font-size: 2.5rem;
+    }
+}
+@media (max-width: 1000px) {
+    #descricao h1::before{
+        display: none;
+    }
+    #conteudo{
+        margin: auto 1rem;
+    }
+} */
+/* End Responsive */
