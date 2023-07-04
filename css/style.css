@@ -205,11 +205,16 @@ footer h4{
 
 
 /* Start Responsive */
-/* @media(min-width: 640px){
+@media(min-width: 640px){
     #menu{
         display: none;
     }
-} */
+}
+@media (max-width: 640px){
+    .links{
+        display: none;
+    }
+}
 @media(max-width:1007px) and (max-width: 640px){
     .vantagem h1{
         text-align: center;
